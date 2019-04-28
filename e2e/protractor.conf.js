@@ -4,7 +4,7 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
-  allScriptsTimeout: 11000,
+  allScriptsTimeout: 1100000, // 可以用來當做效能指標
   specs: [
     './src/**/*.e2e-spec.ts'
   ],
