@@ -1,6 +1,6 @@
 import { browser, element, by,$ } from 'protractor';
 
-fdescribe('the user submit a questionnaire', () => {
+describe('the user submit a questionnaire', () => {
   it('should success', async () => {
     await browser.get('/labs/questionnaire');
     await element(by.name('username')).sendKeys('John');
