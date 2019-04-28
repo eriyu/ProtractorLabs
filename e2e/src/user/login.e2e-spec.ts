@@ -13,7 +13,7 @@ describe('the user try to login', () => {
     element(by.id('userName')).sendKeys('John');
     element(by.id('password')).sendKeys('654321');
     element(by.buttonText('登入')).click();
-    let fail = element(by.css('.alert-danger'));
+    let fail = element(by.css('div.alert.alert-danger'));
     expect(fail.getText()).toEqual('錯誤的帳號密碼');
   });
 });
