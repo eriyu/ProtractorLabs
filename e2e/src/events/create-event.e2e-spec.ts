@@ -42,14 +42,21 @@ fdescribe('練習表單操作 (DatePicker 與檔案上傳)', () => {
 
   it('點擊儲存按鈕，驗證活動列表顯示 「Protractor 實戰」 活動', async () => {
     await element(by.className('btn-success')).click();
-    const founds = element.all(by.css('.well.hoverwell.thumbnail'))
-      .filter((elem, index) => {
-        return elem.getText().then((text) => {
-          return text.includes('PROTRACTOR 實戰');
-        });
-      });
-    const listcount = await founds.count();
-    expect(listcount).toBeGreaterThan(0);
+    // const founds = element.all(by.css('.well.hoverwell.thumbnail'))
+    //   .filter((elem, index) => {
+    //     return elem.getText().then((text) => {
+    //       return text.includes('PROTRACTOR 實戰');
+    //     });
+    //   });
+    // const listcount = await founds.count();
+    // expect(listcount).toBeGreaterThan(0);
+    const found = element.all(by.css('.well.hoverwell.thumbnail'))
+      .filter(async (elem, index) => {
+        const text = await elem.getText();
+        return text.includes('PROTRACTOR 實戰');
+      }).first();
+    const isPresent = await found.isPresent();
+    expect(isPresent).toBe(true);
   });
 
 });
