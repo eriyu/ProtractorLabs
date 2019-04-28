@@ -1,5 +1,5 @@
 import { AppPage } from './app.po';
-import { browser, logging, element, by } from 'protractor';
+import { browser, logging, element, by, $} from 'protractor';
 
 describe('App', () => {
   let page: AppPage;
@@ -18,7 +18,7 @@ describe('App', () => {
 
   it('should display crate action page title', () => {
     browser.get('http://localhost:4200/events/new');
-    const result = element(by.css('h1')).getText();
+    const result = $('h1').getText();
     expect(result).toEqual('建立活動');
   });
 
