@@ -1,6 +1,6 @@
 import { browser, by, element, $, $$, ExpectedConditions as EC, ElementFinder } from 'protractor';
 
-fdescribe('練習複雜 DOM 定位運用', () => {
+describe('練習複雜 DOM 定位運用', () => {
 
   let searchTerm: ElementFinder;
   let searchBtn: ElementFinder;
