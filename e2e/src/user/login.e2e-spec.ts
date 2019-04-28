@@ -1,6 +1,6 @@
 import { browser, element, by, $} from 'protractor';
 
-fdescribe('the user try to login',  () => {
+describe('the user try to login',  () => {
   it('should login to event page', async () => {
     await browser.get('/user/login');
     await element(by.id('userName')).sendKeys('John');
