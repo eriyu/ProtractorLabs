@@ -8,6 +8,7 @@ exports.config = {
   specs: [
     './src/**/*.e2e-spec.ts'
   ],
+  SELENIUM_PROMISE_MANAGER: false,
   capabilities: {
     browserName: 'chrome',
   },
@@ -19,7 +20,7 @@ exports.config = {
     defaultTimeoutInterval: 10000,
     print: function() {}
   },
-  onPrepare() {
+  async onPrepare() {
     require('ts-node').register({
       project: require('path').join(__dirname, './tsconfig.e2e.json')
     });
