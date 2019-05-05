@@ -1,6 +1,6 @@
 import { browser, by, element, $, $$, ExpectedConditions as EC } from 'protractor';
 
-fdescribe('練習 ExpectedCondition', () => {
+describe('練習 ExpectedCondition', () => {
 
   // 搜尋條件輸入 ngzone
   // 等待搜尋畫面
