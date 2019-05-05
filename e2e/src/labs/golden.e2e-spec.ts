@@ -4,7 +4,7 @@ import { compareScreenshot } from 'blue-harvest';
 
 // npm run protractor -- e2e/protractor-goldens.conf.js
 
-fdescribe('練習畫面呈現測試', () => {
+describe('練習畫面呈現測試', () => {
   it('should compare pages', async () => {
     await browser.get('/');
     await browser.manage().window().setSize(1366, 1024);
