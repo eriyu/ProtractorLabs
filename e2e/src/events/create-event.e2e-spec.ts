@@ -1,7 +1,7 @@
 import { browser, by, element, $, $$, ExpectedConditions as EC } from 'protractor';
 import * as path from 'path';
 
-fdescribe('練習表單操作 (DatePicker 與檔案上傳)', () => {
+describe('練習表單操作 (DatePicker 與檔案上傳)', () => {
   beforeAll(async () => {
   });
 
