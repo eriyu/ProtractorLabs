@@ -19,7 +19,7 @@ function waitForTyping() {
   });
 }
 
-fdescribe('the user submit a questionnaire', () => {
+describe('the user submit a questionnaire', () => {
   beforeAll(async () => {
   });
 
